@@ -15,5 +15,7 @@ all:main.out
 
 main.out:mainfile.cpp
 	g++ $(INC) -c mainfile.cpp
+clean:
+	rm mainfile.o
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)
