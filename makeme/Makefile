@@ -4,7 +4,7 @@ OBJS = $(HOME)/folder1/folder1.o $(HOME)/folder2/folder2.o $(HOME)/folder3/folde
 
 TOPTARGETS := all clean
 
-SUBDIRS := $(wildcard */.)
+SUBDIRS := $(wildcard */. | */*/.)
 
 $(TOPTARGETS): $(SUBDIRS)
 $(SUBDIRS):
@@ -16,6 +16,6 @@ all:main.out
 main.out:mainfile.cpp
 	g++ $(INC) -c mainfile.cpp
 clean:
-	rm mainfile.o
+	rm mainfile.o main.out
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)
