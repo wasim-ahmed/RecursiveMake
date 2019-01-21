@@ -1,2 +1,2 @@
 # RecursiveMake
-calling make file from a makefile
+an effort to understand recursive make. that is calling makefile from a makefile.
